@@ -5,8 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Pear2\src\PEAR2\Net\RouterOS;
 
-require_once 'Pear2/Autoload.php';
-
 class RouterController extends Controller
 {
     public function connect()
