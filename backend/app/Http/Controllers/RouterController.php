@@ -2,23 +2,25 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Pear2\src\PEAR2\Net\RouterOS;
+use PEAR2\Net\RouterOS\Client;
+use PEAR2\Net\RouterOS\Exception as PEARException;
+use PEAR2\Net\RouterOS\Request as PEARRequest;
+use PEAR2\Net\RouterOS\Response as PEARResponse;
 
 class RouterController extends Controller
 {
     public function connect()
     {
         try {
-            $client = new RouterOS\Client('192.168.88.1', 'admin', 'password');
-        } catch (Exception $e) {
+            $client = new Client('192.168.2.16', 'admin', 'password');
+        } catch (PEARException $e) {
             die('Unable to connect to the router.');
         }
-        
-        $responses = $client->sendSync(new RouterOS\Request('/ip/arp/print'));
-        
+
+        $responses = $client->sendSync(new PEARRequest('/ip/arp/print'));
+
         foreach ($responses as $response) {
-            if ($response->getType() === RouterOS\Response::TYPE_DATA) {
+            if ($response->getType() === PEARResponse::TYPE_DATA) {
                 echo 'IP: ', $response->getProperty('address'),
                 ' MAC: ', $response->getProperty('mac-address'),
                 "\n";

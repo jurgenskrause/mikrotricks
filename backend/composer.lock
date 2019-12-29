@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3bb4dacacf43532a01bf1d3d6dd3bbe1",
+    "content-hash": "91f9876e1c47d6de024e6ab4ff5b1a94",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -1069,6 +1069,132 @@
                 "random"
             ],
             "time": "2018-07-02T15:55:56+00:00"
+        },
+        {
+            "name": "pear2/net_routeros",
+            "version": "1.0.0b6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pear2/Net_RouterOS.git",
+                "reference": "8af33b009ec51c09d3bc09f3986034f19f7c439c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pear2/Net_RouterOS/zipball/8af33b009ec51c09d3bc09f3986034f19f7c439c",
+                "reference": "8af33b009ec51c09d3bc09f3986034f19f7c439c",
+                "shasum": ""
+            },
+            "require": {
+                "pear2/net_transmitter": ">=1.0.0b1",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "pear2/cache_shm": "dev-develop",
+                "pear2/console_color": "dev-develop",
+                "pear2/console_commandline": "dev-master",
+                "phpunit/phpunit": "@stable",
+                "squizlabs/php_codesniffer": "@stable"
+            },
+            "suggest": {
+                "ext-apc": "This, APCu or Wincache is required for persistent connections.",
+                "ext-apcu": "This, APC or Wincache is required for persistent connections.",
+                "ext-openssl": "Enables encrypted connections.",
+                "ext-wincache": "This, APC or APCu is required for persistent connections. Reccomended for Windows.",
+                "pear2/cache_shm": "Enables persistent connections.",
+                "pear2/console_color": "Enables colors in the console",
+                "pear2/console_commandline": "Enables the console"
+            },
+            "bin": [
+                "scripts/roscon.php"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "PEAR2\\Net\\RouterOS\\": "src/",
+                    "PEAR2\\Net\\Transmitter\\": "vendor/pear2/net_transmitter/src/",
+                    "PEAR2\\Cache\\SHM": "vendor/pear2/cache_shm/src/",
+                    "PEAR2\\Console\\Color": "vendor/pear2/console_color/src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-2.1"
+            ],
+            "authors": [
+                {
+                    "name": "Vasil Rangelov",
+                    "email": "boen.robot@gmail.com",
+                    "role": "lead"
+                }
+            ],
+            "description": "This package allows you to read and write information from a RouterOS host using MikroTik's RouterOS API.",
+            "homepage": "http://pear2.github.com/Net_RouterOS/",
+            "keywords": [
+                "api",
+                "mikrotik",
+                "package",
+                "pear2",
+                "router",
+                "routeros"
+            ],
+            "time": "2017-05-22T15:42:06+00:00"
+        },
+        {
+            "name": "pear2/net_transmitter",
+            "version": "1.0.0b2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pear2/Net_Transmitter.git",
+                "reference": "5abea5cd481ac9631f446cfb8fb415f4c43318f6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pear2/Net_Transmitter/zipball/5abea5cd481ac9631f446cfb8fb415f4c43318f6",
+                "reference": "5abea5cd481ac9631f446cfb8fb415f4c43318f6",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "@stable"
+            },
+            "suggest": {
+                "ext-apc": "This, APCu or Wincache is required for persistent connections.",
+                "ext-apcu": "This, APC or Wincache is required for persistent connections.",
+                "ext-openssl": "Enables encrypted connections.",
+                "ext-wincache": "This, APC or APCu is required for persistent connections. Reccomended for Windows.",
+                "pear2/cache_shm": "Enables persistent connections"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "PEAR2\\Net\\Transmitter\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-2.1"
+            ],
+            "authors": [
+                {
+                    "name": "Vasil Rangelov",
+                    "email": "boen.robot@gmail.com",
+                    "role": "lead"
+                }
+            ],
+            "description": "A stream wrapper that ensures data integrity. Particularly useful for sockets.",
+            "homepage": "http://pear2.github.com/Net_Transmitter/",
+            "keywords": [
+                "Socket",
+                "integrity",
+                "network",
+                "networking",
+                "package",
+                "pear2",
+                "sockets"
+            ],
+            "time": "2017-05-13T13:41:29+00:00"
         },
         {
             "name": "phpoption/phpoption",
@@ -4954,7 +5080,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "pear2/net_routeros": 10
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
