@@ -12,7 +12,7 @@ class RouterController extends Controller
     public function connect()
     {
         try {
-            $client = new Client('192.168.2.16', 'admin', 'password');
+            $client = new Client(env('ROUTER_HOST'), env('ROUTER_USER'), env('ROUTER_PASS'));
         } catch (PEARException $e) {
             die('Unable to connect to the router.');
         }
