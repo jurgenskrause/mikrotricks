@@ -17,6 +17,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/router', function() {
-    return response()->json(['message' => 'werkt dit?'], 200);
-});
+Route::get('/router', 'RouterController@connect');
