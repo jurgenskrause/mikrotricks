@@ -8,4 +8,7 @@ ROUTER_HOST="192.168.1.1"
 ROUTER_USER="admin"
 ROUTER_PASS="password"
 ```
-See .env.example for an example.
+See .env.example for an example. After setting the environment variables, run the following command:
+```bash
+composer dump-autoload
+```
