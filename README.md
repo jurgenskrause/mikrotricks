@@ -1,6 +1,6 @@
 # Mikrotricks
-API for interacting with [Net RouterOS](https://github.com/pear2/Net_RouterOS).
-
+Dashboard for interacting with [Net RouterOS](https://github.com/pear2/Net_RouterOS).
+Uses [Adminator](https://github.com/puikinsh/Adminator-admin-dashboard) dashboard.
 ## Usage
 Set the following environment variables in your .env file:
 ```bash
