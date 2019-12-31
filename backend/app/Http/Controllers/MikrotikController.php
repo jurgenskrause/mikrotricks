@@ -7,7 +7,7 @@ use PEAR2\Net\RouterOS\Exception as PEARException;
 use PEAR2\Net\RouterOS\Request as PEARRequest;
 use PEAR2\Net\RouterOS\Response as PEARResponse;
 
-class RouterController extends Controller
+class MikrotikController extends Controller
 {
     public function connect()
     {
