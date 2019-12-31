@@ -20,7 +20,9 @@ class CreateDevicesTable extends Migration
             $table->foreign('user_id')->references('id')->on('users');
             $table->dateTime('last_seen');
             $table->string('owner');
-            $table->timestamps();
+            $table->unsignedBigInteger('type_id');
+            $table->foreign('type_id')->references('id')->on('types');
+            $table->timestamps();;
         });
     }
 
